@@ -8,7 +8,7 @@ pub fn main() !void {
         return;
     }
 
-    const sprite = engine.Sprite{
+    var sprite = engine.Sprite{
         .x = 100,
         .y = 100,
         .width = 64,
@@ -16,9 +16,8 @@ pub fn main() !void {
     };
 
     while (engine.pollInput(window.?)) {
-        // Here you would update sprite position based on input
+        engine.moveSprite(&sprite, window.?, 2.0);
         engine.renderSprite(sprite);
-        // In a real engine, you'd present the frame here
     }
 
     engine.deinitWindow(window.?);

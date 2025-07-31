@@ -80,7 +80,7 @@ pub fn build(b: *std.Build) void {
     demo_exe.linkSystemLibrary("glfw");
     demo_exe.linkSystemLibrary("MoltenVK");
     // You may need to adjust include/library paths for your system:
-    // demo_exe.addIncludePath(.{ .path = "/usr/local/include" });
+    demo_exe.addIncludePath(.{ .cwd_relative = "/Users/Ari/VulkanSDK/1.4.321.0/macOS/include" });
     // demo_exe.addLibraryPath(.{ .path = "/usr/local/lib" });
     b.installArtifact(demo_exe);
 
