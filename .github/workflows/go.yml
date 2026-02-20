@@ -10,19 +10,14 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    container: archlinux:latest
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up Go
-      uses: actions/setup-go@v5
-      with:
-        go-version: '1.21'
-        check-latest: true
-
-    - name: Install dependencies
+    - name: Install dependencies and Go
       run: |
-        sudo apt-get update
-        sudo apt-get install -y libgl1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev libxrandr-dev libxxf86vm-dev libasound2-dev pkg-config
+        pacman -Syu --noconfirm
+        pacman -S --noconfirm git go pkgconf alsa-lib libxcursor libxi libxinerama libxrandr mesa glibc base-devel
+
+    - uses: actions/checkout@v4
 
     - name: Build
       run: go build -v ./...

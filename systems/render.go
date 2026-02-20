@@ -3,9 +3,9 @@ package systems
 import (
 	"reflect"
 
+	"github.com/grapefizz/zapengine/components"
+	"github.com/grapefizz/zapengine/ecs"
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/zapengine/zapengine/components"
-	"github.com/zapengine/zapengine/ecs"
 )
 
 // RenderSystem handles drawing entities with Transform and Sprite components.

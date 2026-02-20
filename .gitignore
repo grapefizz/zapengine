@@ -1,58 +1,33 @@
-
-# Zig build artifacts
-/.zig-cache/
-/.zig-out/
-
-# macOS system files
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Vulkan SDK cache and logs
-vulkaninfo.html
-vulkaninfo.txt
-MoltenVK.log
-
-# IDE/editor files
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-*.code-workspace
-
-# Compiled object files and binaries
-*.o
-*.obj
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
 *.so
 *.dylib
-*.dll
-*.exe
+
+# Test binaries, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
 *.out
-*.a
-*.lib
-*.app
 
-# Logs and temporary files
-*.log
-*.tmp
-*.swp
-*~
+# Dependency directory
+/vendor/
 
-# User-specific files
-*.user
-*.userosscache
-*.suo
-*.ntvs_analysis.dat
-*.njsproj
-*.sln
-*.VC.db
-*.VC.VC.opendb
+# Go workspace files
+go.work
+go.work.sum
 
-# Test output
-/test-output/
+# Local environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor directories
+.idea/
+.vscode/
+
+# Local build artifacts
+/example_app

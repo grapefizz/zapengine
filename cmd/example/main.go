@@ -5,12 +5,12 @@ import (
 	"log"
 	"math"
 
+	"github.com/grapefizz/zapengine"
+	"github.com/grapefizz/zapengine/components"
+	"github.com/grapefizz/zapengine/ecs"
+	"github.com/grapefizz/zapengine/input"
+	"github.com/grapefizz/zapengine/systems"
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/zapengine/zapengine"
-	"github.com/zapengine/zapengine/components"
-	"github.com/zapengine/zapengine/ecs"
-	"github.com/zapengine/zapengine/input"
-	"github.com/zapengine/zapengine/systems"
 )
 
 // MainMenu is our sample scene.
